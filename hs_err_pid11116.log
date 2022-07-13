@@ -1,0 +1,187 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 1114112 bytes for Allocator (commit)
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3390), pid=11116, tid=20420
+#
+# JRE version:  (11.0.15+10) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.15+10-LTS, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=F:\DIV\maven\bin\..\bin\m2.conf -Dmaven.home=F:\DIV\maven\bin\.. -Dlibrary.jansi.path=F:\DIV\maven\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\lamb\Documents\NetBeansProjects\TestesLogicos org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath com.mycompany.testeslogicos.Teste -Dexec.executable=C:\RECH\zulu11.0.15\x64\bin\java.exe -Dmaven.ext.class.path=C:\isCOBOL\Netbeans_11\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+
+Host: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+Time: Wed Jul 13 15:29:35 2022 Hora Padrão da Bahia elapsed time: 0.096335 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000018106a92000):  JavaThread "Unknown thread" [_thread_in_vm, id=20420, stack(0x00000075cd400000,0x00000075cd500000)]
+
+Stack: [0x00000075cd400000,0x00000075cd500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x648d2a]
+V  [jvm.dll+0x7dc5c9]
+V  [jvm.dll+0x7ddcc9]
+V  [jvm.dll+0x7de3b3]
+V  [jvm.dll+0x26c335]
+V  [jvm.dll+0x645fd4]
+V  [jvm.dll+0x63a795]
+V  [jvm.dll+0x314ed1]
+V  [jvm.dll+0x333bfb]
+V  [jvm.dll+0x3030d6]
+V  [jvm.dll+0x7b5707]
+V  [jvm.dll+0x7b6ed1]
+V  [jvm.dll+0x382689]
+V  [jvm.dll+0x79790f]
+V  [jvm.dll+0x3f44a7]
+V  [jvm.dll+0x3f6991]
+C  [jli.dll+0x52cb]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000181068f3530, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000018106aa9800 GCTaskThread "GC Thread#0" [stack: 0x00000075cd500000,0x00000075cd600000] [id=20584]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff97a03fed0]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000018106a8e260] Heap_lock - owner thread: 0x0000018106a92000
+
+Heap address: 0x0000000701400000, size: 4076 MB, Compressed Oops mode: Non-zero based: 0x0000000701400000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.076 Loaded shared library C:\RECH\zulu11.0.15\x64\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff667d90000 - 0x00007ff667d9e000 	C:\RECH\zulu11.0.15\x64\bin\java.exe
+0x00007ff9c9e70000 - 0x00007ff9ca065000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff9c9100000 - 0x00007ff9c91be000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff9c7b00000 - 0x00007ff9c7dc9000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff9c7590000 - 0x00007ff9c7690000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff9b8830000 - 0x00007ff9b884b000 	C:\RECH\zulu11.0.15\x64\bin\VCRUNTIME140.dll
+0x00007ff9afa40000 - 0x00007ff9afa57000 	C:\RECH\zulu11.0.15\x64\bin\jli.dll
+0x00007ff9c8320000 - 0x00007ff9c84c1000 	C:\Windows\System32\USER32.dll
+0x00007ff9c79d0000 - 0x00007ff9c79f2000 	C:\Windows\System32\win32u.dll
+0x00007ff9c8570000 - 0x00007ff9c859b000 	C:\Windows\System32\GDI32.dll
+0x00007ff9c78c0000 - 0x00007ff9c79cb000 	C:\Windows\System32\gdi32full.dll
+0x00007ff9c7690000 - 0x00007ff9c772d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff9a6dd0000 - 0x00007ff9a706a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff9c8790000 - 0x00007ff9c882e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff9c9c30000 - 0x00007ff9c9c60000 	C:\Windows\System32\IMM32.DLL
+0x00007ff9bfa70000 - 0x00007ff9bfa7c000 	C:\RECH\zulu11.0.15\x64\bin\vcruntime140_1.dll
+0x00007ff9a17c0000 - 0x00007ff9a184d000 	C:\RECH\zulu11.0.15\x64\bin\msvcp140.dll
+0x00007ff979d30000 - 0x00007ff97a8f8000 	C:\RECH\zulu11.0.15\x64\bin\server\jvm.dll
+0x00007ff9c9300000 - 0x00007ff9c93ac000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff9c8280000 - 0x00007ff9c831b000 	C:\Windows\System32\sechost.dll
+0x00007ff9c91d0000 - 0x00007ff9c92fa000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff9c91c0000 - 0x00007ff9c91c8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9b0d80000 - 0x00007ff9b0d89000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff9b0de0000 - 0x00007ff9b0e07000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff9c93b0000 - 0x00007ff9c941b000 	C:\Windows\System32\WS2_32.dll
+0x00007ff9baed0000 - 0x00007ff9baeda000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff9c54b0000 - 0x00007ff9c54c2000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff9bf960000 - 0x00007ff9bf970000 	C:\RECH\zulu11.0.15\x64\bin\verify.dll
+0x00007ff9b3630000 - 0x00007ff9b3814000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff9b3500000 - 0x00007ff9b352c000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff9c7dd0000 - 0x00007ff9c7e53000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff9ad890000 - 0x00007ff9ad8b8000 	C:\RECH\zulu11.0.15\x64\bin\java.dll
+0x00007ff9bd300000 - 0x00007ff9bd30a000 	C:\RECH\zulu11.0.15\x64\bin\jimage.dll
+0x00007ff9b3160000 - 0x00007ff9b3178000 	C:\RECH\zulu11.0.15\x64\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\RECH\zulu11.0.15\x64\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\RECH\zulu11.0.15\x64\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=F:\DIV\maven\bin\..\bin\m2.conf -Dmaven.home=F:\DIV\maven\bin\.. -Dlibrary.jansi.path=F:\DIV\maven\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\lamb\Documents\NetBeansProjects\TestesLogicos 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher -Dexec.args=-classpath %classpath com.mycompany.testeslogicos.Teste -Dexec.executable=C:\RECH\zulu11.0.15\x64\bin\java.exe -Dmaven.ext.class.path=C:\isCOBOL\Netbeans_11\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+java_class_path (initial): F:\DIV\maven\bin\..\boot\plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 4273995776                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\RECH\zulu11.0.15\x64
+PATH=C:\rechint\oracle\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;S:\Bat;S:\Div;F:\OBJ\NET\RTS;C:\Program Files\TortoiseSVN\bin;C:\ProgramData\chocolatey\bin;C:\Users\lamb\AppData\Local\Microsoft\WindowsApps;;F:\Div\MinGW\bin;F:\Div\MinGW\MSYS\1.0\bin;
+USERNAME=Wellington
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1202)
+OS uptime: 0 days 2:32 hours
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3 microcode 0x27, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+
+Memory: 4k page, system-wide physical 16301M (7673M free)
+TotalPageFile size 32685M (AvailPageFile size 8M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 19M, peak: 20M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.15+10-LTS) for windows-amd64 JRE (Zulu11.56+19-CA) (11.0.15+10-LTS), built on Apr 17 2022 09:03:51 by "zulu_re" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
