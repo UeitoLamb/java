@@ -15,7 +15,7 @@ public class Teste {
 
         Scanner s = new Scanner(System.in);
 
-        System.out.println("  CALCULAMB  ");
+        System.out.println("--CALCULAMB--");
 
         System.out.println(" | 1 - Soma          | ");
         System.out.println(" | 2 - Subtração     | ");
