@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class DoWhile {
 
     @SuppressWarnings("empty-statement")
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
         System.out.println("");
         System.out.println("CALCULAMB");
